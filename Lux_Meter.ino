@@ -13,7 +13,7 @@
 #include <RTClib.h> // the clock on logging shield for getting time of data
 
 #define LOG_INTERVAL 1000 // milliseconds between logs
-#define SYNC_INTERVAL 1500 // milliseconds between writings
+#define SYNC_INTERVAL 3000 // milliseconds between writings
 uint32_t syncTime = 0; // time of last sync()
 
 #define ECHO_TO_SERIAL 1 // echo data to serial port (USB)
@@ -50,10 +50,11 @@ void setup() {
   Serial.println("card initialized.");
 
   // create logging file
-  char filename[] = "LOGGER00.CSV";
-  for(uint8_t i = 0; i < 100; i++) {
-    filename[6] = i/10 + '0'; 
-    filename[7] = i%10 + '0';
+  char filename[] = "LOGGER000.CSV";
+  for(uint16_t i = 0; i < 1000; i++) {
+    filename[6] = i/100 + '0'; 
+    filename[7] = i/10 + '0';
+    filename[8] = i%10 + '0';
     if(!SD.exists(filename)) {
       logfile = SD.open(filename, FILE_WRITE); // make new if none exists
       break;
