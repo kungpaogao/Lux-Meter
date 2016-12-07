@@ -7,6 +7,10 @@ Built by the Algonquin Science Research Club (SRC) for solar panel research.
 - Logs and saves data to .CSV files on an SD card
 - Easily customizable log and sync intervals
 
+### Planned Features
+- Automatic creation of new log files each day
+- Other stuff...
+
 ## Hardware
 - Arduino Uno R3 (+ USB cable)
 - BH1750 light sensor
@@ -25,8 +29,8 @@ Built by the Algonquin Science Research Club (SRC) for solar panel research.
 ## Known Issues
 - Sometimes more than one logger file (usually 2 or 3) will be created
   - This can sometimes be fixed by setting WAIT_TO_START to 1
-- Currently, this code only allows the creation of 100 log files (00-99)
-  - This can easily be fixed 
+- Currently, this code only allows the creation of 1000 log files (000-999)
+  - Easily expandable
 
 ## References and Notes
 The inspiration for this project came from this [video](https://www.youtube.com/watch?v=XhUUKY8xm2A), and the initial code to test the BH1750 was taken from [here](http://www.homautomation.org/2014/06/15/measure-light-with-arduino-and-bh1750-module/).
