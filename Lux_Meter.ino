@@ -33,7 +33,7 @@ void error(char *str) {
   while(1);
 }
 
-void setup() {
+void setup(void) {
   Serial.begin(9600);
   Serial.println("Starting...");
 
@@ -50,11 +50,11 @@ void setup() {
   Serial.println("card initialized.");
 
   // create logging file
-  char filename[] = "LOGGER000.CSV";
+  char filename[] = "LOG000.CSV";
   for(uint16_t i = 0; i < 1000; i++) {
-    filename[6] = i/100 + '0'; 
-    filename[7] = i/10 + '0';
-    filename[8] = i%10 + '0';
+    filename[3] = i/100 + '0'; 
+    filename[4] = i/10 + '0';
+    filename[5] = i%10 + '0';
     if(!SD.exists(filename)) {
       logfile = SD.open(filename, FILE_WRITE); // make new if none exists
       break;
@@ -83,7 +83,7 @@ void setup() {
   lightMeter.begin(); // start light sensor
 }
 
-void loop() {
+void loop(void) {
   DateTime now; 
 
   // delay for the amount of time between readings
