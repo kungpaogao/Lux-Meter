@@ -6,6 +6,7 @@ Built by the Algonquin Science Research Club (SRC) for solar panel research.
 - Utilises BH1750 sensor to get lux readouts
 - Logs and saves data to .CSV files on an SD card
 - Easily customizable log and sync intervals
+- LEDs signal that code is running
 
 ### Planned Features
 - Automatic creation of new log files each day
@@ -27,8 +28,9 @@ Built by the Algonquin Science Research Club (SRC) for solar panel research.
 - Other libraries should be installed by default
 
 ## Known Issues
-- Sometimes more than one logger file (usually 2 or 3) will be created
-  - This can sometimes be fixed by setting WAIT_TO_START to 1
+- ~~Sometimes more than one logger file (usually 2 or 3) will be created~~
+  - ~~This can sometimes be fixed by setting WAIT_TO_START to 1~~
+  - This was because the code was already running before the Serial Monitor was opened (LED will now flash when code runs)
 - Currently, this code only allows the creation of 1000 log files (000-999)
   - Easily expandable
 
