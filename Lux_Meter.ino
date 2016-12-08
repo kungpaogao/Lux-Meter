@@ -68,6 +68,7 @@ void setup(void) {
 
   // connect to RTC
   Wire.begin();
+  RTC.adjust(DateTime(F(__DATE__), F(__TIME__)));
   if(!RTC.begin()) {
     logfile.println("RTC failed"); // shows error in logfile
     #if ECHO_TO_SERIAL
@@ -80,10 +81,15 @@ void setup(void) {
     Serial.println("millis,stamp,datetime,light");
   #endif
 
+  pinMode(LED_BUILTIN, OUTPUT); // set LED to be an output
   lightMeter.begin(); // start light sensor
 }
 
 void loop(void) {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(50);
+  digitalWrite(LED_BUILTIN, LOW); //flash LED to indicate code is running
+  
   DateTime now; 
 
   // delay for the amount of time between readings
