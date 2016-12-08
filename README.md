@@ -6,10 +6,11 @@ Built by the Algonquin Science Research Club (SRC) for solar panel research.
 - Utilises BH1750 sensor to get lux readouts
 - Logs and saves data to .CSV files on an SD card
 - Easily customizable log and sync intervals
-- LEDs signal that code is running
+- Flashes LED when code is running
 
 ### Planned Features
 - Automatic creation of new log files each day
+- Figure out how to use other LEDs
 - Other stuff...
 
 ## Hardware
