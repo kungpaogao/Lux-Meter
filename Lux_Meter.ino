@@ -68,7 +68,6 @@ void setup(void) {
 
   // connect to RTC
   Wire.begin();
-  RTC.adjust(DateTime(F(__DATE__), F(__TIME__)));
   if(!RTC.begin()) {
     logfile.println("RTC failed"); // shows error in logfile
     #if ECHO_TO_SERIAL
