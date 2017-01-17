@@ -1,8 +1,7 @@
 // Science Research Club
 // 2016.12.02
 
-// references: 
-// https://github.com/adafruit/Light-and-Temp-logger/blob/master/lighttemplogger.ino
+// full documentation: https://github.com/kungpaogao/Lux-Meter
 
 // NOTE: needs modified Print.h for printf()
 // http://playground.arduino.cc/Main/Printf
