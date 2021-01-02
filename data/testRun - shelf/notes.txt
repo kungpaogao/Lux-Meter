@@ -1,0 +1,4 @@
+on shelf in room
+no direct sunlight
+day temp: ~55F, evening/night: ~64F
+1 sec log/sync interval
